@@ -1,0 +1,6 @@
+Scenario,Speed_m_s,Handoffs,Packets_Sent,Packets_Received,PDR_percent,Average_Delay_ms
+Stationary,0,0,100,99,99.0,18.4
+Slow,2,1,100,97,97.0,24.7
+Moderate,5,2,100,94,94.0,32.6
+Fast,10,4,100,88,88.0,48.9
+Temporary outage,5,2,100,81,81.0,76.3

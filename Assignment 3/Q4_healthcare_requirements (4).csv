@@ -1,0 +1,5 @@
+Service,Priority,Target_Delay_ms,Observed_Delay_ms,Delivery_percent,Handling
+Emergency alert,High,100,72,99.8,Priority queue
+Patient vital signs,High,250,184,99.2,Reliable delivery + timestamp
+Ambulance location,Medium,1000,420,98.5,Periodic location update
+Routine report,Low,5000,2100,97.0,Store-and-forward

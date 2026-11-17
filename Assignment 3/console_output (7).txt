@@ -1,0 +1,11 @@
+Q7 - MOBILE EMERGENCY COMMUNICATION NETWORK
+---------------------------------------------------------------------------------------------------------
+Test  Nodes  Speed   Gateway   Protocol  PDR %    Delay ms   Control 
+E1        10       1 Up        AODV          98.6       32.4       38
+E2        20       5 Up        AODV          95.4       48.7       86
+E3        30      10 Up        AODV          88.2       73.5      151
+E4        20       5 Down      AODV          90.4       61.8       94
+E5        20       5 Up        DSDV          92.4       52.1      126
+\nArchitecture: Ambulance/rescue/police nodes -> AODV ad hoc mesh -> emergency gateway
+-> surviving cellular/satellite link -> Home Agent -> hospital/command centre.
+If the gateway fails, local mesh communication continues and external messages are queued.

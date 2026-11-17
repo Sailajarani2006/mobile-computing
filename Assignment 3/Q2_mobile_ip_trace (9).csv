@@ -1,0 +1,8 @@
+Step,Event,State
+1,Visited network detected,MN moved
+2,CoA obtained,172.16.4.20
+3,Registration request,10.1.0.1
+4,Binding updated,10.1.0.25->172.16.4.20
+5,CN sends packet,10.1.0.25
+6,HA tunnels packet,172.16.4.20
+7,Decapsulation,Delivered

@@ -1,0 +1,8 @@
+Q1 - WIRELESS MOBILITY ANALYSIS
+------------------------------------------------------------------------
+Scenario               Speed  Handoffs    PDR %   Delay ms
+Stationary               0.0         0     99.0       18.4
+Slow                     2.0         1     97.0       24.7
+Moderate                 5.0         2     94.0       32.6
+Fast                    10.0         4     88.0       48.9
+Temporary outage         5.0         2     81.0       76.3

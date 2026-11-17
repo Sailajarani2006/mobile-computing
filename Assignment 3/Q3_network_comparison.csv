@@ -1,0 +1,6 @@
+Test,Network,Nodes,Infrastructure,Successful_Paths,Delay_ms,PDR_percent
+Cellular - normal,Cellular,10,Available,10,22.5,98.0
+Cellular - BS outage,Cellular,10,Partial,6,61.2,86.0
+Ad hoc mesh,Ad hoc,10,Unavailable,9,38.4,94.0
+Ad hoc - relay failure,Ad hoc,10,Unavailable,7,52.7,89.0
+Ad hoc - alternate route,Ad hoc,10,Unavailable,9,44.1,93.0

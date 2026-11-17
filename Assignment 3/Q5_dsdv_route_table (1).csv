@@ -1,0 +1,4 @@
+Destination,Next_Hop,Hop_Count,Sequence_Number
+A,A,0,10
+B,D,2,10
+C,D,3,8

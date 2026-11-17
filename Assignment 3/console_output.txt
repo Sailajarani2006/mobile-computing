@@ -1,0 +1,12 @@
+Q5 - DSDV PROACTIVE ROUTING
+-----------------------------------------------------------------
+Initial route table at node A
+Destination     Next hop     Hop count    Sequence  
+A               A                       0         10
+B               B                       1          8
+C               B                       2          6
+\nTopology change: link A-B fails; a fresh update arrives through node D.
+\nUpdated route table at node A
+A               A                       0         10
+B               D                       2         10
+C               D                       3          8

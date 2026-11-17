@@ -1,0 +1,10 @@
+Q3 - CELLULAR VERSUS AD HOC NETWORKS
+--------------------------------------------------------------------------------------
+Test                        Network      Paths   Delay(ms)    PDR(%)
+Cellular - normal           Cellular        10        22.5      98.0
+Cellular - BS outage        Cellular         6        61.2      86.0
+Ad hoc mesh                 Ad hoc           9        38.4      94.0
+Ad hoc - relay failure      Ad hoc           7        52.7      89.0
+Ad hoc - alternate route    Ad hoc           9        44.1      93.0
+\nDecision: For disaster areas without fixed infrastructure, use an ad hoc mesh;
+use a surviving cellular/satellite gateway when available.
