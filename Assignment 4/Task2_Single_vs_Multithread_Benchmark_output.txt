@@ -1,0 +1,9 @@
+TASK 2 - SERIAL VS THREAD-POOL BENCHMARK
+Work items=240,000 | workers=3 | logical CPUs=3
+Run 1: serial=0.0453s | thread-pool=0.0675s
+Run 2: serial=0.0483s | thread-pool=0.0784s
+Run 3: serial=0.1515s | thread-pool=0.0536s
+Median serial=0.0483s | median thread-pool=0.0675s | ratio=1.398x
+Result equality: True
+Interpretation: thread-pool slower in this run
+LIMITATION: desktop Python timing only; CPython GIL; no Android core placement, PSS, jank or energy data.

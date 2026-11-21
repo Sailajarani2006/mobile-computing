@@ -1,0 +1,17 @@
+{
+  "conditions": [
+    "charging_wifi",
+    "LTE_moving",
+    "low_battery_stationary",
+    "low_power",
+    "offline",
+    "hot_device"
+  ],
+  "fleet_sizes": [
+    1,
+    5,
+    10,
+    20
+  ],
+  "note": "Estimated model units."
+}

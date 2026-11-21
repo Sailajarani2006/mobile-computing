@@ -1,0 +1,11 @@
+TASK 3 - RUNTIME WORKLOADS (PYTHON PROXY, NOT ART)
+CPU loop: first=0.4379s second=0.4363s peak Python allocation=0.00 MiB
+Object allocation: first=0.1980s second=0.1664s peak Python allocation=12.29 MiB
+UI-list model: first=0.0422s second=0.0442s peak Python allocation=0.00 MiB
+\nANDROID ART EVIDENCE COMMANDS (replace package name)
+adb shell dumpsys package <PACKAGE> | findstr /i compiler
+adb shell cmd package compile -m speed-profile <PACKAGE>
+adb shell cmd package compile -m verify <PACKAGE>
+adb logcat -d | findstr /i art-gc
+adb shell dumpsys meminfo <PACKAGE>
+\nLIMITATION: Python first/second invocation is not Android cold/warm launch; tracemalloc is not ART heap telemetry.

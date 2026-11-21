@@ -1,0 +1,18 @@
+TASK 1 - MOBILE OS ARCHITECTURE / DEVICE EVIDENCE
+\nAndroid
+ 1. Applications: Activities, services, receivers and app processes
+ 2. Framework: ActivityManager, PackageManager and system services
+ 3. ART: DEX loading, runtime compilation and garbage collection
+ 4. Native libraries/HAL: native APIs and hardware abstraction
+ 5. Linux kernel: scheduling, memory, drivers, Binder and security
+\niOS
+ 1. Cocoa Touch: UIKit and application lifecycle
+ 2. Media: graphics, audio, video and animation
+ 3. Core Services: Foundation, networking and data services
+ 4. Core OS: Darwin/XNU kernel, drivers and low-level security
+\nPROCESS AND IPC
+Android: Zygote forks app processes; Binder is the principal system IPC.
+iOS: launchd coordinates launch; XPC and Mach ports support IPC.
+\nANDROID LIVE COMMAND EVIDENCE
+NOT COLLECTED: adb unavailable. Install Android Platform Tools, connect device, enable USB debugging.
+\nLIMITATION: no iOS device or live Binder/XPC trace is inspected by this Python run.

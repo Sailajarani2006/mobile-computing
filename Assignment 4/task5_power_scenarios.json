@@ -1,0 +1,10 @@
+{
+  "window_hours": 8,
+  "techniques": [
+    "DVFS",
+    "Doze/App Standby",
+    "batching",
+    "wakelock discipline"
+  ],
+  "note": "Synthetic counters."
+}

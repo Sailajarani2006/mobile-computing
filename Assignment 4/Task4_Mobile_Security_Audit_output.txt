@@ -1,0 +1,16 @@
+TASK 4 - STRIDE-STYLE MOBILE SECURITY AUDIT
+Config: {'platform': 'Android', 'permissions': ['CAMERA', 'ACCESS_FINE_LOCATION'], 'token_storage': 'Keystore-backed encrypted storage', 'network': 'HTTPS + TLS validation', 'cleartext_allowed': False, 'internal_component_exported': False, 'app_signing': True}
+\n[Spoofing] Token theft/replay\n Control: Keystore key, short-lived token, server revocation\n Decision: PARTIAL\n Residual: An unlocked compromised device may use an active session.
+\n[Tampering] Local database modification\n Control: Authenticated encryption and integrity checks\n Decision: PARTIAL\n Residual: Rooted OS/app-process compromise remains.
+\n[Repudiation] Denying a submitted record\n Control: Server audit log with timestamp and UUID\n Decision: PARTIAL\n Residual: Client clock alone is not trusted.
+\n[Disclosure] Another app reads patient data\n Control: Sandbox UID separation and encrypted DB\n Decision: BLOCKED in normal OS\n Residual: Root/forensic compromise remains.
+\n[DoS] Repeated API requests\n Control: Rate limiting and exponential backoff\n Decision: PARTIAL\n Residual: Distributed abuse may remain.
+\n[Elevation] Launch internal activity externally\n Control: exported=false and signature permissions\n Decision: BLOCKED\n Residual: Misconfigured deep links may expose another route.
+\n[Network interception] Read/modify API traffic\n Control: TLS validation and optional certificate pinning\n Decision: BLOCKED on valid TLS path\n Residual: Compromised device trust remains.
+\nASSET TRACE
+Auth token | token theft | Keystore + short-lived token | PARTIAL
+Local DB | extraction | sandbox + encrypted DB | PARTIAL
+API traffic | interception | TLS validation | BLOCKED on valid TLS
+Internal activity | external launch | exported=false | BLOCKED
+\nVERDICT: conditionally acceptable for this example configuration; validate actual app.
+LIMITATION: rule-based illustrative audit; no APK, manifest or network traffic was scanned.

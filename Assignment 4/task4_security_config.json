@@ -1,0 +1,10 @@
+{
+  "platform": "Android",
+  "permissions": [
+    "CAMERA",
+    "ACCESS_FINE_LOCATION"
+  ],
+  "token_storage": "Keystore-backed encrypted storage",
+  "network": "HTTPS",
+  "cleartext_allowed": false
+}

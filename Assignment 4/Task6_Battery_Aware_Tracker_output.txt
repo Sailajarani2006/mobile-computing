@@ -1,0 +1,31 @@
+TASK 6 - BATTERY-AWARE SECURE TRACKING SIMULATION
+\nCondition 1: Charging + Wi-Fi\n Sampling=15s | Upload=batch upload now
+ Estimated energy=0.18 MODEL UNITS
+ Protection rule: encrypt before queue; authenticated TLS for upload (design requirement).
+\nCondition 2: 80% battery + LTE\n Sampling=30s | Upload=authenticated batched upload
+ Estimated energy=0.13 MODEL UNITS
+ Protection rule: encrypt before queue; authenticated TLS for upload (design requirement).
+\nCondition 3: 20%, stationary, LTE\n Sampling=120s | Upload=defer until charging/Wi-Fi
+ Estimated energy=0.07 MODEL UNITS
+ Protection rule: encrypt before queue; authenticated TLS for upload (design requirement).
+\nCondition 4: Low-power mode\n Sampling=300s | Upload=defer until charging/Wi-Fi
+ Estimated energy=0.05 MODEL UNITS
+ Protection rule: encrypt before queue; authenticated TLS for upload (design requirement).
+\nCondition 5: No connectivity\n Sampling=60s | Upload=queue; sync when online
+ Estimated energy=0.10 MODEL UNITS
+ Protection rule: encrypt before queue; authenticated TLS for upload (design requirement).
+\nCondition 6: Device hot\n Sampling=180s | Upload=defer except critical
+ Estimated energy=0.08 MODEL UNITS
+ Protection rule: encrypt before queue; authenticated TLS for upload (design requirement).
+\nSix-cycle estimated total=0.61 model units
+\n3-CASE VALIDATION VS ALWAYS-ON (assumed 5s interval)
+Case 1: policy=15s (240.0 samples/hour) | baseline=5s (720 samples/hour)
+Case 2: policy=30s (120.0 samples/hour) | baseline=5s (720 samples/hour)
+Case 3: policy=120s (30.0 samples/hour) | baseline=5s (720 samples/hour)
+\nFLEET SCALE
+Devices=1 | evaluations=6 | modeled wake-ups/hour=482 | queued records=24
+Devices=5 | evaluations=30 | modeled wake-ups/hour=2410 | queued records=120
+Devices=10 | evaluations=60 | modeled wake-ups/hour=4820 | queued records=240
+Devices=20 | evaluations=120 | modeled wake-ups/hour=9640 | queued records=480
+\nSync rules: unique UUID + sequence; server idempotent upsert; resume from acknowledged sequence; retain unacknowledged records.
+LIMITATION: energy is estimated model units, not mAh; no GPS, radio, Keystore, encryption or server was accessed.

@@ -1,0 +1,6 @@
+{
+  "cpu_iterations": 180000,
+  "allocation_objects": 35000,
+  "ui_rows": 12000,
+  "note": "Python proxy only, not ART."
+}

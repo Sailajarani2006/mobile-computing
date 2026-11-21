@@ -1,0 +1,11 @@
+{
+  "platforms": [
+    "Android",
+    "iOS"
+  ],
+  "commands": [
+    "adb devices -l",
+    "adb shell dumpsys meminfo <PACKAGE>",
+    "adb shell dumpsys activity processes"
+  ]
+}

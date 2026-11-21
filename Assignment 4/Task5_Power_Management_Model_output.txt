@@ -1,0 +1,16 @@
+TASK 5 - POWER MANAGEMENT MODEL
+Synthetic 8-hour scenario counters; NOT physical measurements or mAh.
+\nBaseline polling: wake-ups=120, radio-active=36 min, delivery latency=1 min
+  Frequent CPU/radio wake-ups
+\nDVFS/efficiency cores: wake-ups=120, radio-active=36 min, delivery latency=1 min
+  Lowers compute cost; wake-up count unchanged
+\nDoze/app standby: wake-ups=18, radio-active=12 min, delivery latency=8 min
+  Defers background work; latency increases
+\nBatching + short wakelock: wake-ups=12, radio-active=8 min, delivery latency=10 min
+  Coalesces work and releases wakelock promptly
+\nHeld partial wakelock: wake-ups=120, radio-active=36 min, delivery latency=1 min
+  Can prevent deep-idle benefit
+\nModeled batching wake-up reduction vs baseline: 90.0%
+Conclusion: DVFS targets CPU cost; Doze defers background work; batching reduces repeated radio wake-ups.
+Conflict: held partial wakelock may defeat idle savings.
+LIMITATION: collect real batterystats/Battery Historian/energy profiler data on device.
